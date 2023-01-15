@@ -1,0 +1,61 @@
+// --- all fonts from the project ---
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+        url("../fonts/Roboto-Regular.woff") format("woff"),
+        url("../fonts/Roboto-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+        url("../fonts/Roboto-Medium.woff") format("woff"),
+        url("../fonts/Roboto-Medium.ttf") format("ttf");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+        url("../fonts/Roboto-Bold.woff") format("woff"),
+        url("../fonts/Roboto-Bold.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sofia Sans";
+    font-display: swap;
+    src: url("../fonts/SofiaSans-Regular.woff2") format("woff2"),
+        url("../fonts/SofiaSans-Regular.woff") format("woff"),
+        url("../fonts/SofiaSans-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("../fonts/Montserrat-Regular.woff") format("woff"),
+        url("../fonts/Montserrat-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff"),
+        url("../fonts/Montserrat-Bold.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+}

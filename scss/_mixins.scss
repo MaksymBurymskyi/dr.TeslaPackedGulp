@@ -1,54 +1,38 @@
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@mixin markerLine($width, $height, $top, $left) {
+  content: "";
+  background: $white-color;
+  position: absolute;
+  z-index: 3;
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+}
+@mixin markerPosition($posTop, $posLeft, $animationName) {
+  top: $posTop;
+  left: $posLeft;
+  animation: $animationName 5s linear forwards;
+}
+@mixin lineWithIcon($urlIcon) {
+  @extend %underLine;
+  top: 0;
+  left: 0;
+  background-image: $urlIcon;
 }
 
-@mixin horizontal-list {
-  @include reset-list;
+// extra mixin for home work ----->
 
-  li {
-    display: inline-block;
-    margin: {
-      left: -2px;
-      right: 2em;
-    }
-  }
-}
-
-@mixin on-circle($item-count, $circle-size, $item-size) {
-  position: relative;
-  width:  $circle-size;
-  height: $circle-size;
-  padding: 0;
-  border-radius: 50%; 
-  list-style: none;       
-  
-  > * {
-    display: block;
-    position: absolute;
-    top:  50%; 
-    left: 50%;
-    width:  $item-size;
-    height: $item-size;
-    margin: - calc($item-size / 2);
-  
-    $angle: calc(360 / $item-count);
-    $rot: 0;
-
-    // $i = 1 - Element 1
-    // $i = 2 - Element 1
-    // $i = 3 - Element 3
-
-    @for $i from 1 through $item-count {
-      &:nth-of-type(#{$i}) {
-        transform: 
-          rotate($rot * 1deg) 
-          translate(calc($circle-size / 2)) 
-          rotate($rot * -1deg);
-      }
-
-      $rot: $rot + $angle;
-    }
-  }
-}
+// @mixin triangle($heightTriangle, $width, $color) {
+//   position: relative;
+//   &::after {
+//     content: "";
+//     width: 0;
+//     height: 0;
+//     border-top: $heightTriangle solid $color;
+//     border-left: $width/2 solid transparent;
+//     border-right: $width/2 solid transparent;
+//     position: absolute;
+//     top: 1em;
+//     left: $width;
+//   }
+// }
